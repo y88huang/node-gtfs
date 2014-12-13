@@ -59,10 +59,10 @@ var GTFSFiles = [
       fileNameBase: 'routes'
     , collection: 'routes'
   },
-  {
-      fileNameBase: 'shapes'
-    , collection: 'shapes'
-  },
+  // {
+  //     fileNameBase: 'shapes'
+  //   , collection: 'shapes'
+  // },
   {
       fileNameBase: 'stop_times'
     , collection: 'stoptimes'
