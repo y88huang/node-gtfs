@@ -8,7 +8,7 @@ var mongoose = require('mongoose')
       , stop_id           :  { type: String, index: true }
       , stop_sequence     :  { type: Number, index: true }
       , stop_headsign     :  { type: String }
-      // , pickup_type       :  { type: String }
-      // , drop_off_type     :  { type: String }
-      // , shape_dist_traveled :  { type: String }
+      , pickup_type       :  { type: String }
+      , drop_off_type     :  { type: String }
+      , shape_dist_traveled :  { type: String }
     }));
