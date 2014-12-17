@@ -76,6 +76,7 @@ module.exports = function routes(app){
       res.send( data || {error: 'No stops for agency/route/direction combination.'});
     });
   });
+
   app.get('/api/stops/:agency/:route_id', function(req, res){
     var agency_key = req.params.agency
       , route_id = req.params.route_id;
@@ -83,7 +84,14 @@ module.exports = function routes(app){
       res.send( data || {error: 'No stops for agency/route combination.'});
     });
   });
-  
+
+  app.get('api/stops/:stop_id',function(req, res){
+        var stop_id = req.stop_id;
+        gtfs.getStopById(stop_id, function(e, data){
+          res.send( data || {error: 'No stops for given stop id.'});
+        });
+  });
+
   app.get('/api/stopsNearby/:lat/:lon/:radiusInMiles', function(req, res){
     var lat = req.params.lat
       , lon = req.params.lon
