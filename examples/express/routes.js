@@ -85,7 +85,7 @@ module.exports = function routes(app){
     });
   });
 
-  app.get('api/stops/:stop_id', function(req, res){
+  app.get('/api/stops/:stop_id', function(req, res){
         var stop_id = req.params.stop_id;
         gtfs.getStopById(stop_id, function(e, data){
           res.send( data || {error: 'No stops for given stop id.'});
